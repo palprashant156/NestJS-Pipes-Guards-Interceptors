@@ -20,6 +20,7 @@ export class AnyExceptionFilter implements ExceptionFilter {
         ? exception.getStatus()
         : HttpStatus.INTERNAL_SERVER_ERROR;
 
+        
     // Formatting a consistent error response
     response.status(status).json({
       statusCode: status,
